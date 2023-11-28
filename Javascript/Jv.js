@@ -13,25 +13,22 @@ Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro e
 // acquisisco l'elemento che ha per classe box
 const Container = document.querySelector(".containerCenter");
 
-// acquisisco l'elemento (bottone) che ha per id genera,
+// acquisisco l'elemento (bottone) che ha per id play,
 const CreateButton = document.getElementById("play");
 
+// acquisisco l'elemento (bottone) che ha per id play,
+const DeleteButton = document.getElementById("del");
+
+const MaxSquare = 100;
 
 
-
-// Quando viene cliccato il pulsante ivia (1 volta)
+// Quando viene cliccato il pulsante play
 CreateButton.addEventListener("click",
 
     function () {
 
-        //Creo l'elemento all'interno del mio file html
-        const square = document.createElement (val1);
-
-        //aggiungo la classe desiderata
-        square.classList.add(val2);
-        
-
-        for(let i = 0 ; i < 100; i++){
+    
+        for(let i = 0 ; i < MaxSquare; i++){
 
             const mySquare = crateSquare("div","Box");
         
@@ -42,8 +39,6 @@ CreateButton.addEventListener("click",
         
     }
 );
-
-
 
 //funzione per il popolamento automatico del mio container
 function crateSquare(val1,val2) {
@@ -58,3 +53,28 @@ function crateSquare(val1,val2) {
     return square;
 
 }
+
+
+
+// Quando viene cliccato il pulsante elimina 
+DeleteButton.addEventListener("click",
+
+    function () {
+
+        //acquisisco i valore nel tag p(qualora ci fosse)
+        const number = document.querySelector('.containerCenter .Box');
+       
+
+        //Verifico che c'è
+        if(number != null){
+
+            //fino a quando nel container ci saranno box
+            while (Container.firstChild) {
+                //elimina ogni figlio box
+                Container.removeChild(Container.firstChild);
+            }
+         
+        }
+        
+    }
+);
