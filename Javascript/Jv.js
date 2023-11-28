@@ -14,18 +14,36 @@ Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro e
 const Container = document.querySelector(".containerCenter");
 
 // acquisisco l'elemento (bottone) che ha per id genera,
-const CreateButton = document.getElementById("genera");
+const CreateButton = document.getElementById("play");
 
 
 
-for(let i = 0 ; i < 100; i++){
 
-    const mySquare = crateSquare("div","Box");
+// Quando viene cliccato il pulsante ivia (1 volta)
+CreateButton.addEventListener("click",
 
-    //inserisco stringa all'interno del mio contenitore tutti i blocchi necessari
-    Container.append(mySquare);
+    function () {
 
-}
+        //Creo l'elemento all'interno del mio file html
+        const square = document.createElement (val1);
+
+        //aggiungo la classe desiderata
+        square.classList.add(val2);
+        
+
+        for(let i = 0 ; i < 100; i++){
+
+            const mySquare = crateSquare("div","Box");
+        
+            //inserisco stringa all'interno del mio contenitore tutti i blocchi necessari
+            Container.append(mySquare);
+        
+        }
+        
+    }
+);
+
+
 
 //funzione per il popolamento automatico del mio container
 function crateSquare(val1,val2) {
