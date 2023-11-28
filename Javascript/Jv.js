@@ -31,9 +31,22 @@ CreateButton.addEventListener("click",
         for(let i = 0 ; i < MaxSquare; i++){
 
             const mySquare = crateSquare("div","Box");
+
+            //aggiungo un evento ai miei blocchi
+            mySquare.addEventListener ("click", 
+
+            function () {
+
+                    //aggiungo la classe desiderata
+                    mySquare.classList.add("onclick");
+                }
+
+            );
         
             //inserisco stringa all'interno del mio contenitore tutti i blocchi necessari
             Container.append(mySquare);
+
+
         
         }
         
