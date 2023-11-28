@@ -19,6 +19,8 @@ const CreateButton = document.getElementById("play");
 // acquisisco l'elemento (bottone) che ha per id play,
 const DeleteButton = document.getElementById("del");
 
+var num = 0;
+
 const MaxSquare = 100;
 
 
@@ -26,10 +28,12 @@ const MaxSquare = 100;
 CreateButton.addEventListener("click",
 
     function () {
-
     
         for(let i = 0 ; i < MaxSquare; i++){
 
+            num++;
+
+            //chiamo funzione per la creazione dei blocchi
             const mySquare = crateSquare("div","Box");
 
             //aggiungo un evento ai miei blocchi
@@ -54,9 +58,18 @@ CreateButton.addEventListener("click",
 //funzione per il popolamento automatico del mio container
 function crateSquare(val1,val2) {
 
+
     //Creo l'elemento all'interno del mio file html
     const square = document.createElement (val1);
 
+    //Creo l'elemento all'interno del mio file html
+    const number = document.createElement ("h1");
+
+    //inserisco scritta all'interno del mio contenuto
+    number.append(num);
+
+    square.append(number);
+    
     //aggiungo la classe desiderata
     square.classList.add(val2);
 
@@ -75,7 +88,7 @@ DeleteButton.addEventListener("click",
         //acquisisco i valore nel tag p(qualora ci fosse)
         const number = document.querySelector('.containerCenter .Box');
        
-
+        num = 0;
         //Verifico che c'è
         if(number != null){
 
