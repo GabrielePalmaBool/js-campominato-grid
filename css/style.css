@@ -5,11 +5,23 @@
     box-sizing: border-box;
 }
 
+
+body {
+    background-color:lightseagreen;
+}
+
+.containerCenter {
+    margin: 0 auto;
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px 50px 0px;
+
+}
 /* box1 */
-.Box {
-    width: 100%;
-    background-color: lightgray;
-    border-radius: 15px;
+.Box{
+    width: calc(100% / 10);
+    height: 100px;
+    background-color: red;
     border: 2px solid black;
-    margin: 50px 0px 50px 0px;
- }
+}
