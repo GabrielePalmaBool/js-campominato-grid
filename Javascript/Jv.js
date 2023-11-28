@@ -27,14 +27,16 @@ for(let i = 0 ; i < 100; i++){
 
 }
 
-
+//funzione per il popolamento automatico del mio container
 function crateSquare(val1,val2) {
 
     //Creo l'elemento all'interno del mio file html
     const square = document.createElement (val1);
 
+    //aggiungo la classe desiderata
     square.classList.add(val2);
 
+    //restituisco tale elemento
     return square;
 
 }

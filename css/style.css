@@ -5,8 +5,26 @@
     box-sizing: border-box;
 }
 
+/* HEADER */
+.header {
+    background-color:white;
+    min-height: 100px;
+}
 
-body {
+.header img {
+    width:5%;
+    vertical-align: middle;
+}
+
+.header h1 {
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+
+/* MAIN */
+.background {
     background-color:lightseagreen;
 }
 
