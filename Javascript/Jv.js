@@ -43,11 +43,9 @@ CreateButton.addEventListener("click",
 
             );
         
-            //inserisco stringa all'interno del mio contenitore tutti i blocchi necessari
+            //inserisco ogni blocco all'inerno del mio container
             Container.append(mySquare);
 
-
-        
         }
         
     }
